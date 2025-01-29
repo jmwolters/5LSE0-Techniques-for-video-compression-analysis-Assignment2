@@ -42,7 +42,7 @@ for g = 1:5000
     for z = 1:28
         for i = 1:10
             probs_row(i,z) = normpdf(test_control_row(z,1,g),means_row(i,z),stds_row(i,z));
-            plot(normpdf(-20:0.01:20,means_row(i,z),stds_row(i,z)));
+            plot(normpdf(-20:0.01:20,means_row(i,z),stds_row(i,z)))
         end
         probs_total = probs_row;
         probs_total(isnan(probs_total)) = 0;
